@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background-color: #3498db;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    float: left;
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+}
+
+/* main _ page */
+.main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.input-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.input-card h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.input-card p {
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* info page */
+.student-info {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.info-item .label {
+    font-weight: bold;
+    margin-left: 10px;
+    min-width: 120px;
+    padding: 5px;
+}
+
+.info-item .value {
+    color: #2c3e50;
+    padding: 5px;
+
+}
+
+.grades-table-container {
+    overflow-x: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grades-table {
+    width: 100%;
+    /* border-collapse: collapse; */
+
+    font-size: 14px;
+}
+
+.grades-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.grades-table td {
+    padding: 2px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+}
+
+.grades-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.grades-table tfoot td {
+    font-weight: bold;
+    background-color: #ecf0f1;
+}
+
+.fail-grade {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    padding-left: 20px;
+
+}
+
+.not-fail-grade {
+    /* color: #10933e; */
+    font-weight: bold;
+    text-align: center;
+    float: left;
+    padding-left: 20px;
+}
+
+#semester1Avg {
+    float: left;
+    padding-left: 18px;
+}
+
+#semester2Avg {
+    float: left;
+    padding-left: 18px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .input-card {
+        padding: 20px;
+    }
+
+    .info-item {
+        min-width: 100%;
+    }
+
+    .grades-table {
+        font-size: 12px;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 8px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grades-table {
+        font-size: 11px;
+    }
+
+    .info-item {
+        flex-direction: column;
+    }
+
+    .info-item .label {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+}

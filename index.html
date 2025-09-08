@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>الصفحة الرئيسية</h1>
+        </header>
+
+        <main class="main-page">
+            <div class="input-card">
+                <h2>الرجاء إدخال الرقم الجامعي</h2>
+                <p>الرقم الجامعي مكون من 4 خانات</p>
+
+                <form id="studentForm">
+                    <div class="input-group">
+                        <input type="text" id="studentId" placeholder="7078" pattern="\d{4}" required>
+                    </div>
+                    <button type="submit" id="submitBtn">تم</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script-index.js"></script>
+</body>
+
+</html>

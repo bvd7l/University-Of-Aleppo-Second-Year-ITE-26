@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات الطالب</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>بيانات الطالب</h1>
+        </header>
+
+        <main class="student-page">
+            <div class="student-info">
+
+                <div class="info-item">
+                    <span class="label">اسم الطالب: <span id="studentName" class="value">-</span></span>
+                    <span class="label">الرقم الجامعي: <span id="studentSID" class="value">-</span></span>
+                    <span class="label">الترتيب: <span id="studentRank" class="value">-</span></span>
+                    <span class="label">المعدل النهائي: <span id="studentAvg" class="value">-</span></span>
+                </div>
+
+            </div>
+
+    </div>
+
+    <div class="grades-table-container">
+        <table class="grades-table">
+            <thead>
+                <tr>
+                    <th>الفصل الأول</th>
+                    <th>الفصل الثاني</th>
+                </tr>
+            </thead>
+            <tbody id="gradesTableBody">
+                <!-- سيتم ملؤها بواسطة JavaScript -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>معدل الفصل الأول: <span id="semester1Avg">-</span></td>
+                    <td>معدل الفصل الثاني: <span id="semester2Avg">-</span></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <br>
+    <!-- <a href="index.html" class="back-btn">العودة</a> -->
+    </main>
+    </div>
+
+    <script src="script-student.js"></script>
+</body>
+
+</html>
