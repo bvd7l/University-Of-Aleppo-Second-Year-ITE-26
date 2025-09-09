@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
     function processStudentData(studentsData) {
-        // الحصول على معرف الطالب من URL
+
         const urlParams = new URLSearchParams(window.location.search);
         const studentId = urlParams.get('id');
 
@@ -59,21 +59,21 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // تعبئة بيانات الطالب
+
         document.getElementById('studentName').textContent = student.name;
         document.getElementById('studentSID').textContent = student.sid;
         document.getElementById('studentRank').textContent = student.rank;
         document.getElementById('studentAvg').textContent = student.avg;
 
-        // تعبئة جدول العلامات
+
         const tableBody = document.getElementById('gradesTableBody');
 
-        // تحديد أطول فصل (بالنسبة لعدد المواد)
+
         const sem1Keys = Object.keys(student.semester1).filter(key => key !== 'AVG1');
         const sem2Keys = Object.keys(student.semester2).filter(key => key !== 'AVG2');
         const maxRows = Math.max(sem1Keys.length, sem2Keys.length);
 
-        // تعيين أسماء المواد بالعربية
+
         const courseNames = {
             NA1: 'التحليل العددي (1)',
             P3: 'برمجة (3)',
@@ -86,16 +86,16 @@ document.addEventListener('DOMContentLoaded', function () {
             L4: 'لغة أجنبية (4)',
             ST: 'الإحصاء',
             LO: 'نظم ودارات منطقية',
-            NA2: 'تحليل عددي (2)',
+            NA2: 'التحليل العددي (2)',
             C4: 'تحليل (4)',
             MH: 'مهارات التواصل'
         };
 
-        // إنشاء صفوف الجدول
+
         for (let i = 0; i < maxRows; i++) {
             const tr = document.createElement('tr');
 
-            // خلية الفصل الأول
+
             const td1 = document.createElement('td');
             if (i < sem1Keys.length) {
                 const key = sem1Keys[i];
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 td1.innerHTML = '&nbsp;';
             }
 
-            // خلية الفصل الثاني
+
             const td2 = document.createElement('td');
             if (i < sem2Keys.length) {
                 const key = sem2Keys[i];
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tableBody.appendChild(tr);
         }
 
-        // تعبئة المعدلات
+
         document.getElementById('semester1Avg').textContent = student.semester1.AVG1;
         document.getElementById('semester2Avg').textContent = student.semester2.AVG2;
     }
