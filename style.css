@@ -209,6 +209,9 @@ button:active {
     padding-left: 18px;
 }
 
+.good-margin {
+    padding-right: 5px;
+}
 
 @media (max-width: 768px) {
     .container {
@@ -243,7 +246,7 @@ button:active {
 
 @media (max-width: 480px) {
     .grades-table {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .info-item {
